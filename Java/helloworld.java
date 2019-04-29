@@ -1,7 +1,7 @@
-public class helloworld {
+﻿public class helloworld {
 
     public static void main(String[] args) {
-        System.out.println("�ȳ�21");
+        System.out.println("안녕21");
     }
 }
 
