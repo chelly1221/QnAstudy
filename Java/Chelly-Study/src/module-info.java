@@ -1,0 +1,2 @@
+module first_module {
+}
