@@ -1,633 +1,107 @@
-!SESSION 2019-04-29 16:31:21.684 -----------------------------------------------
-eclipse.buildId=4.11.0.I20190307-0500
-java.version=12.0.1
-java.vendor=Oracle Corporation
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
-Framework arguments:  -product org.eclipse.epp.package.java.product
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
 
-!ENTRY org.eclipse.mylyn.bugzilla.core 4 0 2019-04-29 16:31:23.447
+!ENTRY org.eclipse.mylyn.tasks.core 2 0 2019-04-30 22:38:19.490
+!MESSAGE Save failed for Task List
+!STACK 1
+org.eclipse.core.runtime.CoreException: Saving Task List failed
+	at org.eclipse.mylyn.internal.tasks.core.externalization.TaskListExternalizer.writeTaskList(TaskListExternalizer.java:74)
+	at org.eclipse.mylyn.internal.tasks.core.externalization.TaskListExternalizationParticipant$2.execute(TaskListExternalizationParticipant.java:129)
+	at org.eclipse.mylyn.internal.tasks.core.TaskList.run(TaskList.java:729)
+	at org.eclipse.mylyn.internal.tasks.core.TaskList.run(TaskList.java:720)
+	at org.eclipse.mylyn.internal.tasks.core.externalization.TaskListExternalizationParticipant.save(TaskListExternalizationParticipant.java:133)
+	at org.eclipse.mylyn.internal.tasks.core.externalization.AbstractExternalizationParticipant.execute(AbstractExternalizationParticipant.java:70)
+	at org.eclipse.mylyn.internal.tasks.core.externalization.ExternalizationManager$ExternalizationJob.run(ExternalizationManager.java:222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.FileNotFoundException: Z:\Java\.metadata\.mylyn\tasks.xml.zip (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:292)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:235)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:185)
+	at org.eclipse.mylyn.internal.tasks.core.externalization.TaskListExternalizer.writeTaskList(TaskListExternalizer.java:59)
+	... 7 more
+!SUBENTRY 1 org.eclipse.mylyn.tasks.core 4 0 2019-04-30 22:38:19.491
+!MESSAGE Saving Task List failed
+!STACK 0
+java.io.FileNotFoundException: Z:\Java\.metadata\.mylyn\tasks.xml.zip (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:292)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:235)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:185)
+	at org.eclipse.mylyn.internal.tasks.core.externalization.TaskListExternalizer.writeTaskList(TaskListExternalizer.java:59)
+	at org.eclipse.mylyn.internal.tasks.core.externalization.TaskListExternalizationParticipant$2.execute(TaskListExternalizationParticipant.java:129)
+	at org.eclipse.mylyn.internal.tasks.core.TaskList.run(TaskList.java:729)
+	at org.eclipse.mylyn.internal.tasks.core.TaskList.run(TaskList.java:720)
+	at org.eclipse.mylyn.internal.tasks.core.externalization.TaskListExternalizationParticipant.save(TaskListExternalizationParticipant.java:133)
+	at org.eclipse.mylyn.internal.tasks.core.externalization.AbstractExternalizationParticipant.execute(AbstractExternalizationParticipant.java:70)
+	at org.eclipse.mylyn.internal.tasks.core.externalization.ExternalizationManager$ExternalizationJob.run(ExternalizationManager.java:222)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.ui.ide 4 4 2019-04-30 22:38:21.858
+!MESSAGE Problems saving workspace
+
+!ENTRY org.eclipse.ui.ide 4 1 2019-04-30 22:38:21.869
+!MESSAGE Problems occurred while trying to save the state of the workbench.
+!SUBENTRY 1 org.eclipse.core.resources 4 568 2019-04-30 22:38:21.869
+!MESSAGE Could not write workspace metadata 'Z:/Java/.metadata/.plugins/org.eclipse.core.resources/.root/2.tree'.
+!STACK 0
+java.io.FileNotFoundException: Z:\Java\.metadata\.plugins\org.eclipse.core.resources\.root\2.tree (지정된 경로를 찾을 수 없습니다)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:292)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:235)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:185)
+	at org.eclipse.core.internal.localstore.SafeFileOutputStream.<init>(SafeFileOutputStream.java:55)
+	at org.eclipse.core.internal.resources.SaveManager.saveTree(SaveManager.java:1389)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1176)
+	at org.eclipse.core.internal.resources.Workspace.save(Workspace.java:2338)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.lambda$1(IDEWorkbenchAdvisor.java:509)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY org.eclipse.eclemma.core 4 0 2019-04-30 22:38:23.633
 !MESSAGE FrameworkEvent ERROR
 !STACK 0
-org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.bugzilla.core [270]
-  Unresolved requirement: Require-Bundle: org.eclipse.mylyn.commons.xmlrpc; bundle-version="[3.8.0,4.0.0)"
-    -> Bundle-SymbolicName: org.eclipse.mylyn.commons.xmlrpc; bundle-version="3.24.2.v20180904-2231"; singleton:="true"
-       org.eclipse.mylyn.commons.xmlrpc [287]
-         Unresolved requirement: Require-Bundle: org.apache.xmlrpc; bundle-version="[3.0.0,4.0.0)"
-           -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
-              org.apache.xmlrpc [57]
-                Unresolved requirement: Import-Package: javax.xml.bind
-  Unresolved requirement: Require-Bundle: org.apache.xmlrpc
-    -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
-
-	at org.eclipse.osgi.container.Module.start(Module.java:452)
-	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1784)
-	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1763)
-	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1726)
-	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1657)
-	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
-	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:233)
-	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:343)
-
-!ENTRY org.eclipse.mylyn.bugzilla.ui 4 0 2019-04-29 16:31:23.455
-!MESSAGE FrameworkEvent ERROR
-!STACK 0
-org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.bugzilla.ui [272]
-  Unresolved requirement: Require-Bundle: org.eclipse.mylyn.bugzilla.core; bundle-version="[3.8.0,4.0.0)"
-    -> Bundle-SymbolicName: org.eclipse.mylyn.bugzilla.core; bundle-version="3.24.2.v20180905-0003"; singleton:="true"
-       org.eclipse.mylyn.bugzilla.core [270]
-         Unresolved requirement: Require-Bundle: org.eclipse.mylyn.commons.xmlrpc; bundle-version="[3.8.0,4.0.0)"
-           -> Bundle-SymbolicName: org.eclipse.mylyn.commons.xmlrpc; bundle-version="3.24.2.v20180904-2231"; singleton:="true"
-              org.eclipse.mylyn.commons.xmlrpc [287]
-                Unresolved requirement: Require-Bundle: org.apache.xmlrpc; bundle-version="[3.0.0,4.0.0)"
-                  -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
-                     org.apache.xmlrpc [57]
-                       Unresolved requirement: Import-Package: javax.xml.bind
-         Unresolved requirement: Require-Bundle: org.apache.xmlrpc
-           -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
-
-	at org.eclipse.osgi.container.Module.start(Module.java:452)
-	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1784)
-	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1763)
-	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1726)
-	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1657)
-	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
-	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:233)
-	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:343)
-
-!ENTRY org.eclipse.mylyn.commons.xmlrpc 4 0 2019-04-29 16:31:23.462
-!MESSAGE FrameworkEvent ERROR
-!STACK 0
-org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.commons.xmlrpc [287]
-  Unresolved requirement: Require-Bundle: org.apache.xmlrpc; bundle-version="[3.0.0,4.0.0)"
-    -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
-       org.apache.xmlrpc [57]
-         Unresolved requirement: Import-Package: javax.xml.bind
-
-	at org.eclipse.osgi.container.Module.start(Module.java:452)
-	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1784)
-	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1763)
-	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1726)
-	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1657)
-	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
-	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:233)
-	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:343)
-
-!ENTRY org.eclipse.egit.core 1 0 2019-04-29 16:32:01.377
-!MESSAGE Using Apache MINA sshd as ssh client.
-
-!ENTRY org.eclipse.mylyn.tasks.core 4 0 2019-04-29 16:32:05.900
-!MESSAGE Unexpected error while loading repository template extensions
-!SUBENTRY 1 org.eclipse.mylyn.tasks.core 4 0 2019-04-29 16:32:05.900
-!MESSAGE Could not load repository template extension contributed by 'org.eclipse.mylyn.bugzilla.ide' with connectorKind 'bugzilla'
-
-!ENTRY org.eclipse.egit.ui 2 0 2019-04-29 16:32:19.019
-!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
-user global configuration and to define the default location to store repositories: 'C:\Users\Chelly'. If this is
-not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
-EGit might behave differently since they see different configuration options.
-This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
-
-!ENTRY org.eclipse.core.resources 4 2 2019-04-29 16:35:06.702
-!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
-!STACK 0
+org.osgi.framework.BundleException: Exception in org.eclipse.eclemma.internal.core.EclEmmaCorePlugin.stop() of bundle org.eclipse.eclemma.core.
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:891)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:1019)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:362)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:644)
+	at org.eclipse.osgi.container.Module.stop(Module.java:506)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1825)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1744)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:275)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:195)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:644)
+	at org.eclipse.osgi.container.Module.stop(Module.java:506)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:207)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:213)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+Caused by: java.lang.NullPointerException
+	at org.eclipse.eclemma.internal.core.ExecutionDataFiles.deleteTemporaryFiles(ExecutionDataFiles.java:48)
+	at org.eclipse.eclemma.internal.core.EclEmmaCorePlugin.stop(EclEmmaCorePlugin.java:110)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:871)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:551)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:864)
+	... 13 more
+Root exception:
 java.lang.NullPointerException
-	at org.eclipse.jdt.internal.core.builder.ClasspathJrt.addRequired(ClasspathJrt.java:326)
-	at org.eclipse.jdt.internal.core.builder.ClasspathJrt.selectModules(ClasspathJrt.java:320)
-	at org.eclipse.jdt.internal.core.builder.ClasspathJrtWithReleaseOption.getModuleNames(ClasspathJrtWithReleaseOption.java:347)
-	at org.eclipse.jdt.internal.core.builder.NameEnvironment.collectModuleEntries(NameEnvironment.java:397)
-	at org.eclipse.jdt.internal.core.builder.NameEnvironment.computeClasspathLocations(NameEnvironment.java:319)
-	at org.eclipse.jdt.internal.core.builder.NameEnvironment.<init>(NameEnvironment.java:62)
-	at org.eclipse.jdt.internal.core.builder.JavaBuilder.initializeBuilder(JavaBuilder.java:629)
-	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:174)
-	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:833)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
-	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:220)
-	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:263)
-	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:316)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
-	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:319)
-	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:371)
-	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:392)
-	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:154)
-	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:244)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+	at org.eclipse.eclemma.internal.core.ExecutionDataFiles.deleteTemporaryFiles(ExecutionDataFiles.java:48)
+	at org.eclipse.eclemma.internal.core.EclEmmaCorePlugin.stop(EclEmmaCorePlugin.java:110)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:871)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:551)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:864)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:1019)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:362)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:644)
+	at org.eclipse.osgi.container.Module.stop(Module.java:506)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1825)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1744)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:275)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:195)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:644)
+	at org.eclipse.osgi.container.Module.stop(Module.java:506)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:207)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:213)
+	at java.base/java.lang.Thread.run(Thread.java:835)
 
-!ENTRY org.eclipse.core.resources 4 75 2019-04-29 16:35:06.715
-!MESSAGE Errors occurred during the build.
-!SUBENTRY 1 org.eclipse.jdt.core 4 75 2019-04-29 16:35:06.715
-!MESSAGE Errors running builder 'Java Builder' on project 'Chelly-Study'.
-!STACK 0
-java.lang.NullPointerException
-	at org.eclipse.jdt.internal.core.builder.ClasspathJrt.addRequired(ClasspathJrt.java:326)
-	at org.eclipse.jdt.internal.core.builder.ClasspathJrt.selectModules(ClasspathJrt.java:320)
-	at org.eclipse.jdt.internal.core.builder.ClasspathJrtWithReleaseOption.getModuleNames(ClasspathJrtWithReleaseOption.java:347)
-	at org.eclipse.jdt.internal.core.builder.NameEnvironment.collectModuleEntries(NameEnvironment.java:397)
-	at org.eclipse.jdt.internal.core.builder.NameEnvironment.computeClasspathLocations(NameEnvironment.java:319)
-	at org.eclipse.jdt.internal.core.builder.NameEnvironment.<init>(NameEnvironment.java:62)
-	at org.eclipse.jdt.internal.core.builder.JavaBuilder.initializeBuilder(JavaBuilder.java:629)
-	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:174)
-	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:833)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
-	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:220)
-	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:263)
-	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:316)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
-	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:319)
-	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:371)
-	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:392)
-	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:154)
-	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:244)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-
-!ENTRY org.eclipse.ui 4 0 2019-04-29 16:35:08.372
-!MESSAGE Unhandled event loop exception
-!STACK 0
-org.eclipse.swt.SWTException: Widget is disposed
-	at org.eclipse.swt.SWT.error(SWT.java:4699)
-	at org.eclipse.swt.SWT.error(SWT.java:4614)
-	at org.eclipse.swt.SWT.error(SWT.java:4585)
-	at org.eclipse.swt.widgets.Widget.error(Widget.java:451)
-	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:350)
-	at org.eclipse.swt.widgets.Composite.getChildren(Composite.java:469)
-	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceDropAdapter.lambda$0(MarketplaceDropAdapter.java:136)
-	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
-	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
-	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3919)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3550)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
-	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:566)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:155)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:661)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1476)
-
-!ENTRY org.eclipse.core.resources 4 2 2019-04-29 16:37:28.105
-!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
-!STACK 0
-java.lang.NullPointerException
-	at org.eclipse.jdt.internal.core.builder.ClasspathJrt.addRequired(ClasspathJrt.java:326)
-	at org.eclipse.jdt.internal.core.builder.ClasspathJrt.selectModules(ClasspathJrt.java:320)
-	at org.eclipse.jdt.internal.core.builder.ClasspathJrtWithReleaseOption.getModuleNames(ClasspathJrtWithReleaseOption.java:347)
-	at org.eclipse.jdt.internal.core.builder.NameEnvironment.collectModuleEntries(NameEnvironment.java:397)
-	at org.eclipse.jdt.internal.core.builder.NameEnvironment.computeClasspathLocations(NameEnvironment.java:319)
-	at org.eclipse.jdt.internal.core.builder.NameEnvironment.<init>(NameEnvironment.java:62)
-	at org.eclipse.jdt.internal.core.builder.JavaBuilder.initializeBuilder(JavaBuilder.java:629)
-	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:174)
-	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:833)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
-	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:220)
-	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:263)
-	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:316)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
-	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:319)
-	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:371)
-	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:392)
-	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:154)
-	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:244)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-
-!ENTRY org.eclipse.core.resources 4 75 2019-04-29 16:37:28.115
-!MESSAGE Errors occurred during the build.
-!SUBENTRY 1 org.eclipse.jdt.core 4 75 2019-04-29 16:37:28.115
-!MESSAGE Errors running builder 'Java Builder' on project 'Chelly-Study'.
-!STACK 0
-java.lang.NullPointerException
-	at org.eclipse.jdt.internal.core.builder.ClasspathJrt.addRequired(ClasspathJrt.java:326)
-	at org.eclipse.jdt.internal.core.builder.ClasspathJrt.selectModules(ClasspathJrt.java:320)
-	at org.eclipse.jdt.internal.core.builder.ClasspathJrtWithReleaseOption.getModuleNames(ClasspathJrtWithReleaseOption.java:347)
-	at org.eclipse.jdt.internal.core.builder.NameEnvironment.collectModuleEntries(NameEnvironment.java:397)
-	at org.eclipse.jdt.internal.core.builder.NameEnvironment.computeClasspathLocations(NameEnvironment.java:319)
-	at org.eclipse.jdt.internal.core.builder.NameEnvironment.<init>(NameEnvironment.java:62)
-	at org.eclipse.jdt.internal.core.builder.JavaBuilder.initializeBuilder(JavaBuilder.java:629)
-	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:174)
-	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:833)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
-	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:220)
-	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:263)
-	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:316)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
-	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:319)
-	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:371)
-	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:392)
-	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:154)
-	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:244)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-!SESSION 2019-04-29 16:39:21.565 -----------------------------------------------
-eclipse.buildId=4.11.0.I20190307-0500
-java.version=12.0.1
-java.vendor=Oracle Corporation
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
-Framework arguments:  -product org.eclipse.epp.package.java.product
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
-
-!ENTRY org.eclipse.mylyn.bugzilla.core 4 0 2019-04-29 16:39:22.462
-!MESSAGE FrameworkEvent ERROR
-!STACK 0
-org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.bugzilla.core [270]
-  Unresolved requirement: Require-Bundle: org.eclipse.mylyn.commons.xmlrpc; bundle-version="[3.8.0,4.0.0)"
-    -> Bundle-SymbolicName: org.eclipse.mylyn.commons.xmlrpc; bundle-version="3.24.2.v20180904-2231"; singleton:="true"
-       org.eclipse.mylyn.commons.xmlrpc [287]
-         Unresolved requirement: Require-Bundle: org.apache.xmlrpc; bundle-version="[3.0.0,4.0.0)"
-           -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
-              org.apache.xmlrpc [57]
-                Unresolved requirement: Import-Package: javax.xml.bind
-  Unresolved requirement: Require-Bundle: org.apache.xmlrpc
-    -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
-
-	at org.eclipse.osgi.container.Module.start(Module.java:452)
-	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1784)
-	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1763)
-	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1726)
-	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1657)
-	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
-	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:233)
-	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:343)
-
-!ENTRY org.eclipse.mylyn.bugzilla.ui 4 0 2019-04-29 16:39:22.469
-!MESSAGE FrameworkEvent ERROR
-!STACK 0
-org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.bugzilla.ui [272]
-  Unresolved requirement: Require-Bundle: org.eclipse.mylyn.bugzilla.core; bundle-version="[3.8.0,4.0.0)"
-    -> Bundle-SymbolicName: org.eclipse.mylyn.bugzilla.core; bundle-version="3.24.2.v20180905-0003"; singleton:="true"
-       org.eclipse.mylyn.bugzilla.core [270]
-         Unresolved requirement: Require-Bundle: org.eclipse.mylyn.commons.xmlrpc; bundle-version="[3.8.0,4.0.0)"
-           -> Bundle-SymbolicName: org.eclipse.mylyn.commons.xmlrpc; bundle-version="3.24.2.v20180904-2231"; singleton:="true"
-              org.eclipse.mylyn.commons.xmlrpc [287]
-                Unresolved requirement: Require-Bundle: org.apache.xmlrpc; bundle-version="[3.0.0,4.0.0)"
-                  -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
-                     org.apache.xmlrpc [57]
-                       Unresolved requirement: Import-Package: javax.xml.bind
-         Unresolved requirement: Require-Bundle: org.apache.xmlrpc
-           -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
-
-	at org.eclipse.osgi.container.Module.start(Module.java:452)
-	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1784)
-	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1763)
-	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1726)
-	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1657)
-	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
-	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:233)
-	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:343)
-
-!ENTRY org.eclipse.mylyn.commons.xmlrpc 4 0 2019-04-29 16:39:22.474
-!MESSAGE FrameworkEvent ERROR
-!STACK 0
-org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.commons.xmlrpc [287]
-  Unresolved requirement: Require-Bundle: org.apache.xmlrpc; bundle-version="[3.0.0,4.0.0)"
-    -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
-       org.apache.xmlrpc [57]
-         Unresolved requirement: Import-Package: javax.xml.bind
-
-	at org.eclipse.osgi.container.Module.start(Module.java:452)
-	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1784)
-	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1763)
-	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1726)
-	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1657)
-	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
-	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:233)
-	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:343)
-
-!ENTRY org.eclipse.egit.core 1 0 2019-04-29 16:39:27.490
-!MESSAGE Using Apache MINA sshd as ssh client.
-
-!ENTRY org.eclipse.mylyn.tasks.core 4 0 2019-04-29 16:39:29.903
-!MESSAGE Unexpected error while loading repository template extensions
-!SUBENTRY 1 org.eclipse.mylyn.tasks.core 4 0 2019-04-29 16:39:29.903
-!MESSAGE Could not load repository template extension contributed by 'org.eclipse.mylyn.bugzilla.ide' with connectorKind 'bugzilla'
-
-!ENTRY org.eclipse.egit.ui 2 0 2019-04-29 16:39:35.143
-!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
-user global configuration and to define the default location to store repositories: 'C:\Users\Chelly'. If this is
-not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
-EGit might behave differently since they see different configuration options.
-This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
-
-!ENTRY org.eclipse.core.resources 4 2 2019-04-29 16:43:15.855
-!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
-!STACK 0
-java.lang.NullPointerException
-	at org.eclipse.jdt.internal.core.builder.ClasspathJrt.addRequired(ClasspathJrt.java:326)
-	at org.eclipse.jdt.internal.core.builder.ClasspathJrt.selectModules(ClasspathJrt.java:320)
-	at org.eclipse.jdt.internal.core.builder.ClasspathJrtWithReleaseOption.getModuleNames(ClasspathJrtWithReleaseOption.java:347)
-	at org.eclipse.jdt.internal.core.builder.NameEnvironment.collectModuleEntries(NameEnvironment.java:397)
-	at org.eclipse.jdt.internal.core.builder.NameEnvironment.computeClasspathLocations(NameEnvironment.java:319)
-	at org.eclipse.jdt.internal.core.builder.NameEnvironment.<init>(NameEnvironment.java:62)
-	at org.eclipse.jdt.internal.core.builder.JavaBuilder.initializeBuilder(JavaBuilder.java:629)
-	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:174)
-	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:833)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
-	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:220)
-	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:263)
-	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:316)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
-	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:319)
-	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:278)
-	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:468)
-	at org.eclipse.core.internal.resources.Project$1.run(Project.java:574)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
-	at org.eclipse.core.internal.resources.Project.internalBuild(Project.java:548)
-	at org.eclipse.core.internal.resources.Project.build(Project.java:116)
-	at org.eclipse.debug.core.model.LaunchConfigurationDelegate$1.run(LaunchConfigurationDelegate.java:424)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2317)
-	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildProjects(LaunchConfigurationDelegate.java:431)
-	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildForLaunch(LaunchConfigurationDelegate.java:127)
-	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:832)
-	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:720)
-	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1029)
-	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1243)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-
-!ENTRY org.eclipse.core.resources 4 566 2019-04-29 16:43:15.867
-!MESSAGE Errors occurred during the build.
-!SUBENTRY 1 org.eclipse.jdt.core 4 75 2019-04-29 16:43:15.867
-!MESSAGE Errors running builder 'Java Builder' on project 'Chelly-Study'.
-!STACK 0
-java.lang.NullPointerException
-	at org.eclipse.jdt.internal.core.builder.ClasspathJrt.addRequired(ClasspathJrt.java:326)
-	at org.eclipse.jdt.internal.core.builder.ClasspathJrt.selectModules(ClasspathJrt.java:320)
-	at org.eclipse.jdt.internal.core.builder.ClasspathJrtWithReleaseOption.getModuleNames(ClasspathJrtWithReleaseOption.java:347)
-	at org.eclipse.jdt.internal.core.builder.NameEnvironment.collectModuleEntries(NameEnvironment.java:397)
-	at org.eclipse.jdt.internal.core.builder.NameEnvironment.computeClasspathLocations(NameEnvironment.java:319)
-	at org.eclipse.jdt.internal.core.builder.NameEnvironment.<init>(NameEnvironment.java:62)
-	at org.eclipse.jdt.internal.core.builder.JavaBuilder.initializeBuilder(JavaBuilder.java:629)
-	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:174)
-	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:833)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
-	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:220)
-	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:263)
-	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:316)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
-	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:319)
-	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:278)
-	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:468)
-	at org.eclipse.core.internal.resources.Project$1.run(Project.java:574)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
-	at org.eclipse.core.internal.resources.Project.internalBuild(Project.java:548)
-	at org.eclipse.core.internal.resources.Project.build(Project.java:116)
-	at org.eclipse.debug.core.model.LaunchConfigurationDelegate$1.run(LaunchConfigurationDelegate.java:424)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2317)
-	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildProjects(LaunchConfigurationDelegate.java:431)
-	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildForLaunch(LaunchConfigurationDelegate.java:127)
-	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:832)
-	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:720)
-	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1029)
-	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1243)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-
-!ENTRY org.eclipse.core.resources 4 2 2019-04-29 16:53:53.452
-!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
-!STACK 0
-java.lang.NullPointerException
-	at org.eclipse.jdt.internal.core.builder.ClasspathJrt.addRequired(ClasspathJrt.java:326)
-	at org.eclipse.jdt.internal.core.builder.ClasspathJrt.selectModules(ClasspathJrt.java:320)
-	at org.eclipse.jdt.internal.core.builder.ClasspathJrtWithReleaseOption.getModuleNames(ClasspathJrtWithReleaseOption.java:347)
-	at org.eclipse.jdt.internal.core.builder.NameEnvironment.collectModuleEntries(NameEnvironment.java:397)
-	at org.eclipse.jdt.internal.core.builder.NameEnvironment.computeClasspathLocations(NameEnvironment.java:319)
-	at org.eclipse.jdt.internal.core.builder.NameEnvironment.<init>(NameEnvironment.java:62)
-	at org.eclipse.jdt.internal.core.builder.JavaBuilder.initializeBuilder(JavaBuilder.java:629)
-	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:174)
-	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:833)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
-	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:220)
-	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:263)
-	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:316)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
-	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:319)
-	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:278)
-	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:468)
-	at org.eclipse.core.internal.resources.Project$1.run(Project.java:574)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
-	at org.eclipse.core.internal.resources.Project.internalBuild(Project.java:548)
-	at org.eclipse.core.internal.resources.Project.build(Project.java:116)
-	at org.eclipse.debug.core.model.LaunchConfigurationDelegate$1.run(LaunchConfigurationDelegate.java:424)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2317)
-	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildProjects(LaunchConfigurationDelegate.java:431)
-	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildForLaunch(LaunchConfigurationDelegate.java:127)
-	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:832)
-	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:720)
-	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1029)
-	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1243)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-
-!ENTRY org.eclipse.core.resources 4 566 2019-04-29 16:53:53.464
-!MESSAGE Errors occurred during the build.
-!SUBENTRY 1 org.eclipse.jdt.core 4 75 2019-04-29 16:53:53.464
-!MESSAGE Errors running builder 'Java Builder' on project 'Chelly-Study'.
-!STACK 0
-java.lang.NullPointerException
-	at org.eclipse.jdt.internal.core.builder.ClasspathJrt.addRequired(ClasspathJrt.java:326)
-	at org.eclipse.jdt.internal.core.builder.ClasspathJrt.selectModules(ClasspathJrt.java:320)
-	at org.eclipse.jdt.internal.core.builder.ClasspathJrtWithReleaseOption.getModuleNames(ClasspathJrtWithReleaseOption.java:347)
-	at org.eclipse.jdt.internal.core.builder.NameEnvironment.collectModuleEntries(NameEnvironment.java:397)
-	at org.eclipse.jdt.internal.core.builder.NameEnvironment.computeClasspathLocations(NameEnvironment.java:319)
-	at org.eclipse.jdt.internal.core.builder.NameEnvironment.<init>(NameEnvironment.java:62)
-	at org.eclipse.jdt.internal.core.builder.JavaBuilder.initializeBuilder(JavaBuilder.java:629)
-	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:174)
-	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:833)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
-	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:220)
-	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:263)
-	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:316)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
-	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:319)
-	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:278)
-	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:468)
-	at org.eclipse.core.internal.resources.Project$1.run(Project.java:574)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
-	at org.eclipse.core.internal.resources.Project.internalBuild(Project.java:548)
-	at org.eclipse.core.internal.resources.Project.build(Project.java:116)
-	at org.eclipse.debug.core.model.LaunchConfigurationDelegate$1.run(LaunchConfigurationDelegate.java:424)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2317)
-	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildProjects(LaunchConfigurationDelegate.java:431)
-	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildForLaunch(LaunchConfigurationDelegate.java:127)
-	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:832)
-	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:720)
-	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1029)
-	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1243)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-
-!ENTRY org.eclipse.core.resources 4 2 2019-04-29 16:56:19.667
-!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
-!STACK 0
-java.lang.NullPointerException
-	at org.eclipse.jdt.internal.core.builder.ClasspathJrt.addRequired(ClasspathJrt.java:326)
-	at org.eclipse.jdt.internal.core.builder.ClasspathJrt.selectModules(ClasspathJrt.java:320)
-	at org.eclipse.jdt.internal.core.builder.ClasspathJrtWithReleaseOption.getModuleNames(ClasspathJrtWithReleaseOption.java:347)
-	at org.eclipse.jdt.internal.core.builder.NameEnvironment.collectModuleEntries(NameEnvironment.java:397)
-	at org.eclipse.jdt.internal.core.builder.NameEnvironment.computeClasspathLocations(NameEnvironment.java:319)
-	at org.eclipse.jdt.internal.core.builder.NameEnvironment.<init>(NameEnvironment.java:62)
-	at org.eclipse.jdt.internal.core.builder.JavaBuilder.initializeBuilder(JavaBuilder.java:629)
-	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:174)
-	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:833)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
-	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:220)
-	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:263)
-	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:316)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
-	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:319)
-	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:278)
-	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:468)
-	at org.eclipse.core.internal.resources.Project$1.run(Project.java:574)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
-	at org.eclipse.core.internal.resources.Project.internalBuild(Project.java:548)
-	at org.eclipse.core.internal.resources.Project.build(Project.java:116)
-	at org.eclipse.debug.core.model.LaunchConfigurationDelegate$1.run(LaunchConfigurationDelegate.java:424)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2317)
-	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildProjects(LaunchConfigurationDelegate.java:431)
-	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildForLaunch(LaunchConfigurationDelegate.java:127)
-	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:832)
-	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:720)
-	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1029)
-	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1243)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-
-!ENTRY org.eclipse.core.resources 4 566 2019-04-29 16:56:19.676
-!MESSAGE Errors occurred during the build.
-!SUBENTRY 1 org.eclipse.jdt.core 4 75 2019-04-29 16:56:19.677
-!MESSAGE Errors running builder 'Java Builder' on project 'Chelly-Study'.
-!STACK 0
-java.lang.NullPointerException
-	at org.eclipse.jdt.internal.core.builder.ClasspathJrt.addRequired(ClasspathJrt.java:326)
-	at org.eclipse.jdt.internal.core.builder.ClasspathJrt.selectModules(ClasspathJrt.java:320)
-	at org.eclipse.jdt.internal.core.builder.ClasspathJrtWithReleaseOption.getModuleNames(ClasspathJrtWithReleaseOption.java:347)
-	at org.eclipse.jdt.internal.core.builder.NameEnvironment.collectModuleEntries(NameEnvironment.java:397)
-	at org.eclipse.jdt.internal.core.builder.NameEnvironment.computeClasspathLocations(NameEnvironment.java:319)
-	at org.eclipse.jdt.internal.core.builder.NameEnvironment.<init>(NameEnvironment.java:62)
-	at org.eclipse.jdt.internal.core.builder.JavaBuilder.initializeBuilder(JavaBuilder.java:629)
-	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:174)
-	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:833)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
-	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:220)
-	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:263)
-	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:316)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
-	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:319)
-	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:278)
-	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:468)
-	at org.eclipse.core.internal.resources.Project$1.run(Project.java:574)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
-	at org.eclipse.core.internal.resources.Project.internalBuild(Project.java:548)
-	at org.eclipse.core.internal.resources.Project.build(Project.java:116)
-	at org.eclipse.debug.core.model.LaunchConfigurationDelegate$1.run(LaunchConfigurationDelegate.java:424)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2317)
-	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildProjects(LaunchConfigurationDelegate.java:431)
-	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildForLaunch(LaunchConfigurationDelegate.java:127)
-	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:832)
-	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:720)
-	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1029)
-	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1243)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-!SESSION 2019-04-30 15:04:22.856 -----------------------------------------------
-eclipse.buildId=4.11.0.I20190307-0500
-java.version=12.0.1
-java.vendor=Oracle Corporation
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
-Framework arguments:  -product org.eclipse.epp.package.java.product
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
-
-!ENTRY org.eclipse.mylyn.bugzilla.core 4 0 2019-04-30 15:04:28.746
-!MESSAGE FrameworkEvent ERROR
-!STACK 0
-org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.bugzilla.core [270]
-  Unresolved requirement: Require-Bundle: org.apache.xmlrpc
-    -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
-       org.apache.xmlrpc [57]
-         Unresolved requirement: Import-Package: javax.xml.bind
-  Unresolved requirement: Require-Bundle: org.eclipse.mylyn.commons.xmlrpc; bundle-version="[3.8.0,4.0.0)"
-    -> Bundle-SymbolicName: org.eclipse.mylyn.commons.xmlrpc; bundle-version="3.24.2.v20180904-2231"; singleton:="true"
-       org.eclipse.mylyn.commons.xmlrpc [287]
-         Unresolved requirement: Require-Bundle: org.apache.xmlrpc; bundle-version="[3.0.0,4.0.0)"
-           -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
-
-	at org.eclipse.osgi.container.Module.start(Module.java:452)
-	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1784)
-	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1763)
-	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1726)
-	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1657)
-	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
-	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:233)
-	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:343)
-
-!ENTRY org.eclipse.mylyn.bugzilla.ui 4 0 2019-04-30 15:04:28.751
-!MESSAGE FrameworkEvent ERROR
-!STACK 0
-org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.bugzilla.ui [272]
-  Unresolved requirement: Require-Bundle: org.eclipse.mylyn.bugzilla.core; bundle-version="[3.8.0,4.0.0)"
-    -> Bundle-SymbolicName: org.eclipse.mylyn.bugzilla.core; bundle-version="3.24.2.v20180905-0003"; singleton:="true"
-       org.eclipse.mylyn.bugzilla.core [270]
-         Unresolved requirement: Require-Bundle: org.apache.xmlrpc
-           -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
-              org.apache.xmlrpc [57]
-                Unresolved requirement: Import-Package: javax.xml.bind
-         Unresolved requirement: Require-Bundle: org.eclipse.mylyn.commons.xmlrpc; bundle-version="[3.8.0,4.0.0)"
-           -> Bundle-SymbolicName: org.eclipse.mylyn.commons.xmlrpc; bundle-version="3.24.2.v20180904-2231"; singleton:="true"
-              org.eclipse.mylyn.commons.xmlrpc [287]
-                Unresolved requirement: Require-Bundle: org.apache.xmlrpc; bundle-version="[3.0.0,4.0.0)"
-                  -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
-
-	at org.eclipse.osgi.container.Module.start(Module.java:452)
-	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1784)
-	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1763)
-	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1726)
-	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1657)
-	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
-	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:233)
-	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:343)
-
-!ENTRY org.eclipse.mylyn.commons.xmlrpc 4 0 2019-04-30 15:04:28.868
-!MESSAGE FrameworkEvent ERROR
-!STACK 0
-org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.commons.xmlrpc [287]
-  Unresolved requirement: Require-Bundle: org.apache.xmlrpc; bundle-version="[3.0.0,4.0.0)"
-    -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
-       org.apache.xmlrpc [57]
-         Unresolved requirement: Import-Package: javax.xml.bind
-
-	at org.eclipse.osgi.container.Module.start(Module.java:452)
-	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1784)
-	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1763)
-	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1726)
-	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1657)
-	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
-	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:233)
-	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:343)
-
-!ENTRY org.eclipse.core.resources 2 10035 2019-04-30 15:04:37.278
-!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
-
-!ENTRY org.eclipse.egit.core 1 0 2019-04-30 15:04:45.597
-!MESSAGE Using Apache MINA sshd as ssh client.
-
-!ENTRY org.eclipse.mylyn.tasks.core 4 0 2019-04-30 15:04:56.237
-!MESSAGE Unexpected error while loading repository template extensions
-!SUBENTRY 1 org.eclipse.mylyn.tasks.core 4 0 2019-04-30 15:04:56.237
-!MESSAGE Could not load repository template extension contributed by 'org.eclipse.mylyn.bugzilla.ide' with connectorKind 'bugzilla'
-
-!ENTRY org.eclipse.egit.ui 2 0 2019-04-30 15:05:03.836
-!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
-user global configuration and to define the default location to store repositories: 'C:\Users\Chelly'. If this is
-not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
-EGit might behave differently since they see different configuration options.
-This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!ENTRY org.eclipse.core.resources 2 10035 2019-04-30 22:38:25.020
+!MESSAGE The workspace will exit with unsaved changes in this session.

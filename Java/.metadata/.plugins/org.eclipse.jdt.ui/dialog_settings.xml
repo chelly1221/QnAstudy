@@ -19,4 +19,6 @@
 		<item key="create_constructor" value="false"/>
 		<item key="create_unimplemented" value="true"/>
 	</section>
+	<section name="JavaElementSearchActions">
+	</section>
 </section>
