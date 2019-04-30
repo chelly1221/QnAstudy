@@ -1,0 +1,34 @@
+
+public class PrintfEx1 {
+
+	public static void main(String[] args) {
+		byte b = 1;
+		short s = 2;
+		char c ='A';
+		
+		int ÈìÈì = 10;
+		long big = 100_000_000_000L; //long big = 100000000000L;
+		long hex = 0xFFFF_FFFF_FFFF_FFFFL;
+		
+		int octNum = 010; //8Áø¼ö¶ó¼­ ¾Õ¿¡ 0 ºÙÀÓ
+		int hexNum = 0x10; //16Áø¼ö´Â 0xºÙÀÌ°í
+		int binNum = 0b10; //2Áø¼ö´Â 0b   Áø¼ö º¯È¯ Â¥Áõ³ª
+		
+		System.out.printf("b=%d%n",b);
+		System.out.printf("s=%d%n",s);
+		System.out.printf("c=%c, %d %n",c,(int)c);
+	    System.out.printf("ÈìÈì=[%5d]%n",ÈìÈì);
+		/*System.out.printf("ÈìÈì=[%-5d]%n",ÈìÈì);
+		System.out.printf("s=%d%n",ÈìÈì);
+		System.out.printf("s=%d%n",s);
+		System.out.printf("s=%d%n",s);
+		System.out.printf("s=%d%n",s);
+		System.out.printf("s=%d%n",s);
+		System.out.printf("s=%d%n",s);
+		System.out.printf("s=%d%n",s);
+		System.out.printf("s=%d%n",s);
+		System.out.printf("s=%d%n",s);
+		System.out.printf("s=%d%n",s);
+		System.out.printf("s=%d%n",s); */
+	}
+}
