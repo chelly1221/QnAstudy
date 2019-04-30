@@ -17,7 +17,7 @@ public class PrintfEx2 {
 			System.out.printf("[%s]%n",url);
 			System.out.printf("[%20s]%n",url);
 			System.out.printf("[%-20s]%n", url); //왼쪽 정렬
-			System.out.printf("[%.8s]%n", url); //왼쪽에서 8글자만 출력
+			System.out.printf("[%.8s]%n", url); //왼쪽에서 8글자만 출력asdf
 			
 	}	
 }
