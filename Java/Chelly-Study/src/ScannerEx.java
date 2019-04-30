@@ -10,4 +10,4 @@ class ScannerEx{
 		System.out.println("입력내용 :"+input); //인풋을 이렇게 넣으면 인풋을 출력할 수 있군
 		System.out.printf("num=%d%n", num); 
 	}	
-}
+} 
