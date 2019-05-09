@@ -13,6 +13,5 @@ class OverflowEx{
 		System.out.println("cMin-1=" + (short) (cMin-1));
 		System.out.println("cMax  =" + sMax);
 		System.out.println("cMax+1=" + (short) (cMax+1));
-		
 	}
 }
