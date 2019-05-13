@@ -28,6 +28,7 @@ public class Class_test {
 		}
 	}
 
+	
 	ArrayList<ArrayList<Integer>> sortList(ArrayList<ArrayList<Integer>> myGame) {
 		for (int i = 0; i < myGame.size(); i++) {
 			Collections.sort(myGame.get(i));
@@ -46,7 +47,6 @@ public class Class_test {
 	public static void main(String[] args) {
 		Class_test lotto = new Class_test(5);
 		lotto.printGame();
-
 	}
 
 }
