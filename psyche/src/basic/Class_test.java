@@ -6,7 +6,7 @@ import java.util.Random;
 
 public class Class_test {
 	ArrayList<ArrayList<Integer>> myGame = new ArrayList<ArrayList<Integer>>();
-
+	
 	public Class_test(int gameNum) {
 		for (int i = 1; i < gameNum + 1; i++) {
 			ArrayList<Integer> numberPool = createNumList();
