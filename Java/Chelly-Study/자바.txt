@@ -1,0 +1,43 @@
+예약어 - 언어구문에 사용되어 클래스나 변수, 메서드의 이름으로 사용불가
+abstract      default        if               package       this
+assert        do             goto           private         throw
+boolean     double        implements   protected     throws
+break        else           import          public          transient
+byte         enum          instanceof     return          true
+case         extends       int               short           try
+catch        false           interface        static          void
+char         final            long             strictfp        volatile
+class         finally          native          super          while
+const        float           new             switch
+continue    for             null              synchronized
+
+Primitive -  Boolean, char, byte short int long, float double
+boolean : true or false
+char : one character
+integer - 1byte:byte 2byte:short 4byte:int 8byte:long
+4byte:float 8byte:double
+
+%b - boolean
+%d - deci
+%o - oct
+%x, %X - hex
+%f - float
+%e, %E - exponent (지수)
+%c - char
+%s - string
+
+\t - tab
+\b - backspace
+\f - form feed
+\n - new line
+\r - carriage return
+\\ - \
+\' - '
+\" - "
+\u유니코드 - 유니코드16진수문자
+
++ - * / %
+<< >>
+> < >= <= == !=
+&& || ! & | ^ ~
+=
