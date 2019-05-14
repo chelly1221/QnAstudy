@@ -1,6 +1,6 @@
 class CharToCode{
 	public static void main(String []args) {
-		char ch = 'A';    // char ch = 65;
+		char ch = 'A' ;    // char ch = 65;
 		int code = (int)ch;   // 정수로 형변환
 		
 		System.out.printf("%c=%d (%#X) %n",ch,code,code);

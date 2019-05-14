@@ -17,7 +17,7 @@ class Year{
 		int birthyear = birth/10000;
 		
 		System.out.print("오늘날짜 8자리를 입력해주세요.");
-		int today = scanner.nextInt();
+		int today = (int)scanner.nextLong();
 		while (today > 99999999 || today < 10000000) {
 			System.out.print("잘못입력하셨습니다. YYYYMMDD 형식으로 입력해주세요.");  
 			today = (int)scanner.nextLong();
