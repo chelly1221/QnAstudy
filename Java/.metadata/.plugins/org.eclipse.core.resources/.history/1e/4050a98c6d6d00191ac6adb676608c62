@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+class Year{
+	public static void main(String []args) {
+		Scanner scanner = new Scanner (System.in);
+		System.out.print("생년월일 6자리를 입력해주세요.");  
+		int birth = scanner.nextInt(); 
+		int birthday = birth%100;
+		int birthyear = birth/10000;
+		int birthtmp = birth/100;
+		int birthtmp2 = birthtmp%100;
+		System.out.print("오늘날짜 6자리를 입력해주세요.");
+		int date = scanner.nextInt();
+		System.out.println(birthday+" "+birthyear+" "+birthtmp2);
+	}	
+} 
