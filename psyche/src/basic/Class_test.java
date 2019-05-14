@@ -21,7 +21,7 @@ public class Class_test {
 		}
 		sortList(myGame);
 	}
-
+	
 	void printGame() {
 		for (int i = 0; i < myGame.size(); i++) {
 			System.out.println(myGame.get(i));
