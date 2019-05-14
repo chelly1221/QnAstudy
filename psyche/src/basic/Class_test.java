@@ -5,14 +5,8 @@ import java.util.Collections;
 import java.util.Random;
 
 public class Class_test {
-	static ArrayList<ArrayList<Integer>> myGame = new ArrayList<ArrayList<Integer>>();
-
-	static void printGame(ArrayList<ArrayList<Integer>> myGame) {
-		for (int i = 0; i < myGame.size(); i++) {
-			System.out.println(myGame.get(i));
-		}
-	}
-
+	ArrayList<ArrayList<Integer>> myGame = new ArrayList<ArrayList<Integer>>();
+	
 	public Class_test(int gameNum) {
 		for (int i = 1; i < gameNum + 1; i++) {
 			ArrayList<Integer> numberPool = createNumList();
@@ -27,15 +21,22 @@ public class Class_test {
 		}
 		sortList(myGame);
 	}
+	
+	void printGame() {
+		for (int i = 0; i < myGame.size(); i++) {
+			System.out.println(myGame.get(i));
+		}
+	}
 
-	public ArrayList<ArrayList<Integer>> sortList(ArrayList<ArrayList<Integer>> myGame) {
+	
+	ArrayList<ArrayList<Integer>> sortList(ArrayList<ArrayList<Integer>> myGame) {
 		for (int i = 0; i < myGame.size(); i++) {
 			Collections.sort(myGame.get(i));
 		}
 		return myGame;
 	};
 
-	public ArrayList<Integer> createNumList() {
+	ArrayList<Integer> createNumList() {
 		ArrayList<Integer> numberPool = new ArrayList<Integer>();
 		for (int i = 1; i < 46; i++) {
 			numberPool.add(i);
@@ -45,8 +46,7 @@ public class Class_test {
 
 	public static void main(String[] args) {
 		Class_test lotto = new Class_test(5);
-		printGame(lotto.myGame);
-
+		lotto.printGame();
 	}
 
 }
