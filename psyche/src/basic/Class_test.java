@@ -7,6 +7,14 @@ import java.util.Random;
 public class Class_test {
 	ArrayList<ArrayList<Integer>> myGame = new ArrayList<ArrayList<Integer>>();
 	
+	public ArrayList<ArrayList<Integer>> getMyGame() {
+		return myGame;
+	}
+
+	public void setMyGame(ArrayList<ArrayList<Integer>> myGame) {
+		this.myGame = myGame;
+	}
+
 	public Class_test(int gameNum) {
 		for (int i = 1; i < gameNum + 1; i++) {
 			ArrayList<Integer> numberPool = createNumList();
@@ -47,6 +55,9 @@ public class Class_test {
 	public static void main(String[] args) {
 		Class_test lotto = new Class_test(5);
 		lotto.printGame();
+		ArrayList<ArrayList<Integer>> getterTest = lotto.getMyGame();
+		System.out.println(getterTest);
+		
 	}
 
 }
