@@ -1,0 +1,21 @@
+
+public class ArrayEx14 {
+	public static void main(String[] args) {
+		char[] hex = { 'C', 'A', 'F', 'E'};   //문자 배열 hex C A F E 
+		
+		String[] binary = { "0000","0001", "0010", "0011"
+				, "0100", "0101", "0110", "0111", "1000", "1001", "1010", "1011", "1100", "1101" , "1110", "1111"
+		};  // 문자열 배열 binary에 2진수 순서대로 넣고
+		String result="";  // 결과 에 빈칸  혹시 저러면 null들어가나모르겠네.
+		
+		for(int i=0; i<hex.length; i++) {    // hex 배열길이만큼 반복
+			if(hex[i] >='0' && hex[i] <='9') {   //배열값 0보다 크거나 같을때 && 배열값 9보다 작거나 같을때  - 결론:배열값 0~9사이일때
+				result +=binary[hex[i]-'0'];   // 리절트는 리절트+바이너리 배열[인덱스=hex[i]배열값-'0']
+			} else {  
+				result +=binary[hex[i]-'A'+10];  //위와비슷한데  'A'빼고 10더함
+			}
+		}
+		System.out.println("hex:"+ new String(hex));
+		System.out.println("binary:"+result);
+ 	}
+}
