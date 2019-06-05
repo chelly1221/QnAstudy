@@ -1,0 +1,10 @@
+
+public class test {
+	public static void main(String[] args) {
+		int i=0;
+		System.out.println((char)(i+'0'));
+		System.out.println((char)(i+((int)'0')));
+		System.out.println(i+'0'));
+		System.out.println('0'+'0');
+	}
+}
