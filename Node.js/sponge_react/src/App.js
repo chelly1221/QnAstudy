@@ -1,4 +1,8 @@
+// react
 import React, { Component } from "react";
+
+// components
+import Content from "./components/Content";
 
 /*
  * ES7-React-js-snippets
@@ -7,7 +11,11 @@ import React, { Component } from "react";
  */
 class App extends Component {
   render() {
-    return <div>app</div>;
+    return (
+      <div>
+        <Content />
+      </div>
+    );
   }
 }
 
