@@ -8,7 +8,7 @@ class Year{
 		System.out.print("생년월일 8자리를 입력해주세요.");  
 		int birth = (int)scanner.nextLong();
 		while (birth > 99999999 || birth < 10000000) {
-			System.out.print("잘못입력하셨습니다. YYYYMMDD 형식으로 입력해주세요.");  
+			System.out.print("잘못입력하셨습니다. YYYYMMDD 형식으로 입력해주세요.\n");  
 			birth = (int)scanner.nextLong();
 		}  
 		

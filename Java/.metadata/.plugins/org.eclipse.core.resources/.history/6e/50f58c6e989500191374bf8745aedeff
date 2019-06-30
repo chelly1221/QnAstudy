@@ -1,0 +1,17 @@
+import java.util.*;
+
+public class Fun {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("첫번째 정수를 입력해랏");
+		int x = scanner.nextInt();
+		System.out.println("두번째 정수를 입력해랏");
+		int y = scanner.nextInt();
+		
+		int first = (x==y) ? 1 : 0;
+		int second = (x==y) ? 0 : 1;
+		
+		System.out.printf("같으면 1 다르면 0 : %d", first);
+		System.out.printf("같으면 0 다르면 1 : %d", second);
+	}
+}
